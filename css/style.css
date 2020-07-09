@@ -9,3 +9,52 @@ body {
 img {
     max-width: 100%;
 }
+
+.main-header {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: center;
+
+
+}
+
+.navbar {
+    background-color: rgb(65, 61, 61);
+    animation: rotacion;
+    animation-duration: 5s;
+    ;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu-link {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    color: white;
+
+}
+
+.menu-link:hover {
+    background-color: rgb(54, 53, 53);
+
+}
+
+.main-content {
+    background-color: wheat;
+    padding: 1em;
+}
+
+
+.main-footer {
+    background-color: black;
+    color: white;
+    padding: 4em;
+    text-align: center;
+}

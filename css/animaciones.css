@@ -1,0 +1,275 @@
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes animar {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    10% {
+        left: 20rem;
+        top: 0rem;
+        color: #9b59b6;
+    }
+
+    30% {
+        top: 5rem;
+        left: 20rem;
+        color: white;
+    }
+
+    60% {
+        top: 5rem;
+        left: 0;
+        color: #9b59b6;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes animacion-volar {
+    0% {
+        transform: translatex(0px);
+    }
+
+    50% {
+        transform: translatex(150px)
+    }
+
+    70% {
+        transform: translatey(-200px)
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes slide {
+    from {
+        transform: translate(0, -50%);
+    }
+
+    to {
+        transform: translate(100%, -50%);
+    }
+}
+
+
+@keyframes top {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+
+
+@keyframes bot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes ball {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+h1 {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+
+.fantasma {
+    background: #8e44ad;
+    color: white;
+    padding: .2rem .3rem 1rem .3rem;
+    position: absolute;
+    text-align: center;
+    border-radius: 2rem 2rem 0 0;
+    animation-name: animar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.box {
+    min-height: 200px;
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgb(54, 53, 53);
+    text-align: center;
+}
+
+.img-rotate {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    animation: animacion-volar 10s 2s 5;
+}
+
+.img-monedas {
+    height: 100px;
+    width: 100px;
+    margin-left: 35em;
+    animation-name: desaparecer;
+    animation-duration: 25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+/*pacman*/
+
+.wrapper {
+    width: 100%;
+    height: 300px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.pacman-wrapper {
+    width: 100%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards, forwards;
+}
+
+.pacman {
+    width: 200px;
+    height: 200px;
+    display: block;
+    position: relative;
+}
+
+.pac {
+    width: 100%;
+    height: 50%;
+    background: yellow;
+    position: absolute;
+}
+
+.top {
+    top: 0;
+    border-radius: 100px 100px 0 0;
+    animation: top .5s infinite linear;
+}
+
+.bot {
+    bottom: 0;
+    border-radius: 0 0 100px 100px;
+    animation: bot .5s infinite linear;
+}
+
+.breadcrumb {
+    width: 100%;
+    transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+}
+
+.ball {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    margin-top: -25px;
+    position: absolute;
+    animation-name: ball;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.ball01 {
+    left: 20%;
+    animation-delay: .6s;
+}
+
+.ball02 {
+    left: 40%;
+    animation-delay: 1.4s;
+}
+
+.ball03 {
+    left: 60%;
+    animation-delay: 2.5s;
+}
+
+.ball04 {
+    left: 80%;
+    animation-delay: 3.5s;
+}
+
+.ball05 {
+    right: 0;
+    animation-delay: 4.3s;
+}
